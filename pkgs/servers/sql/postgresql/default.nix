@@ -61,7 +61,7 @@ let
       "--with-system-tzdata=${tzdata}/share/zoneinfo"
       "--enable-debug"
       (lib.optionalString enableSystemd "--with-systemd")
-      (if stdenv.isDarwin then "--with-uuid=e2fs" else "--with-ossp-uuid")
+      (if stdenv.isDarwin then "--with-uuid=e2fs" else "--with-uuid=ossp")
     ] ++ lib.optionals icuEnabled [ "--with-icu" ];
 
     patches =
