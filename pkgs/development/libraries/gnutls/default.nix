@@ -24,7 +24,10 @@ stdenv.mkDerivation {
 
   src = fetchurl {
     url = "mirror://gnupg/gnutls/v3.6/gnutls-${version}.tar.xz";
+    #v 3.6.15
     sha256 = "0n0m93ymzd0q9hbknxc2ycanz49sqlkyyf73g9fk7n787llc7a0f";
+    #v 3.6.14
+    #sha256 = "0qwxsfizynly0ns537vnhnlm5lh03la4vbsmz675n0n7vqd7ac2n";
   };
 
   outputs = [ "bin" "dev" "out" "man" "devdoc" ];
